@@ -102,22 +102,8 @@ export default function TodoList() {
   )
 
   return (
-    <div className="space-y-6">
-      <Card>
-        <CardContent className="pt-6">
-          <div className="flex gap-2">
-            <Input
-              placeholder="Add a new task..."
-              value={newTodo}
-              onChange={(e) => setNewTodo(e.target.value)}
-              onKeyDown={handleKeyDown}
-            />
-            <Button onClick={handleAddTodo}>Add</Button>
-          </div>
-        </CardContent>
-      </Card>
-
-      <div className="space-y-4">
+    <div className="flex flex-col h-[calc(100vh-114px)]">
+      <div className="flex-1 overflow-y-auto space-y-4 p-4">
         {todos.length === 0 ? (
           <p className="text-center text-muted-foreground py-4">No tasks yet. Add one above!</p>
         ) : (
@@ -138,6 +124,18 @@ export default function TodoList() {
           </>
         )}
       </div>
+
+      <footer className="fixed bottom-0 left-0 right-0 z-10 border-t p-4">
+        <div className="flex gap-2">
+          <Input
+            placeholder="Add a new task..."
+            value={newTodo}
+            onChange={(e) => setNewTodo(e.target.value)}
+            onKeyDown={handleKeyDown}
+          />
+          <Button onClick={handleAddTodo}>Add</Button>
+        </div>
+      </footer>
     </div>
   )
 }
