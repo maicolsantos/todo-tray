@@ -1,6 +1,6 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
-  "productName": "todo-tray-app",
+  "productName": "Todo list and Notes",
   "version": "0.1.0",
   "identifier": "com.todo-tray-app.app",
   "build": {
