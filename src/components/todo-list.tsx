@@ -86,7 +86,7 @@ export default function TodoList() {
                     {todo.title}
                   </label>
                   <p className="text-xs text-muted-foreground mt-1">
-                    Created: {format(new Date(todo.createdAt), "MMM d, yyyy 'at' h:mm a")}
+                    Created: {format(new Date(todo.createdAt), "PPPpp")}
                   </p>
                 </div>
               )}
